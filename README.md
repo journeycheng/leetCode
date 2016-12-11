@@ -10,7 +10,6 @@
 
 [4. 二分查找](https://github.com/journeycheng/leetCode/blob/master/array_binary_search.md)
 
-------
 
 ## 二叉树
 
@@ -22,7 +21,6 @@
 
 [4. 数组转换为二叉树](https://github.com/journeycheng/leetCode/blob/master/array_to_tree.md)
 
-------
 
 ## 链表
 
