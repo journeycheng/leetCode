@@ -27,7 +27,7 @@ public class void preOrder(BinaryTree root){
 }
 ```
 
-- 中序遍历
+- 中序遍历打印
 ```java
 public class void inOrder(BinaryTree root){
     if(root == null){
@@ -39,7 +39,7 @@ public class void inOrder(BinaryTree root){
 }
 ```
 
-- 后序遍历
+- 后序遍历打印
 ```java
 public class void postOrder(BinaryTree root){
     if(root == null){
