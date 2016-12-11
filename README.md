@@ -6,7 +6,9 @@
 
 [2. 归并排序](https://github.com/journeycheng/leetCode/blob/master/array_merge_sort.md)
 
-[3. 二分查找](https://github.com/journeycheng/leetCode/blob/master/array_binary_search.md)
+[3. 堆排序](https://github.com/journeycheng/leetCode/blob/master/array_heap_sort.md)
+
+[4. 二分查找](https://github.com/journeycheng/leetCode/blob/master/array_binary_search.md)
 
 ## 树
 
