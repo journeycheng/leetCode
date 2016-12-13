@@ -19,9 +19,11 @@
 
 [3. 链表的快速排序](https://github.com/journeycheng/leetCode/blob/master/linkedList_quick_sort.md)
 
-[4. 反转链表](https://github.com/journeycheng/leetCode/blob/master/reverse_linkedList.md)
+[4. 合并有序链表](https://github.com/journeycheng/leetCode/blob/master/merge_sorted_linkedLists.md)
 
-[5. 判断链表中是否有环](https://github.com/journeycheng/leetCode/blob/master/judge_cycle_in_linkedList.md)
+[5. 反转链表](https://github.com/journeycheng/leetCode/blob/master/reverse_linkedList.md)
+
+[6. 判断链表中是否有环](https://github.com/journeycheng/leetCode/blob/master/judge_cycle_in_linkedList.md)
 
 
 ## 二叉树
