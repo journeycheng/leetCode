@@ -41,10 +41,7 @@ public boolean hasPathSum(TreeNode root, int sum){
     }
     
     sum -= root.val;
-    if(hasPathSum(root.left, sum)){
-        return true;
-    }
-    if(hasPathSum(root.right, sum)){
+    if(hasPathSum(root.left, sum) || hasPathSum(root.right, sum)){
         return true;
     }
     
