@@ -38,4 +38,5 @@
 
 [4. 数组转换为二叉树](https://github.com/journeycheng/leetCode/blob/master/array_to_tree.md)
 
+[5. 二叉树是否存在根节点到叶子节点的和等于某个值](https://github.com/journeycheng/leetCode/blob/master/tree_path_sum.md)
 
