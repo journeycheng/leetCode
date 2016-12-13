@@ -43,3 +43,5 @@
 [6. 平衡二叉树的判断](https://github.com/journeycheng/leetCode/blob/master/is_balanced_tree.md)
 
 [7. 有序链表转换为二叉搜索树](https://github.com/journeycheng/leetCode/blob/master/sorted_linkedlist_2_BST.md)
+
+[8. 有序数组转换为二叉搜索树](https://github.com/journeycheng/leetCode/blob/master/sorted_array_2_BST.md)
