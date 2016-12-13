@@ -19,6 +19,8 @@
 
 [3. 链表的快速排序](https://github.com/journeycheng/leetCode/blob/master/linkedList_quick_sort.md)
 
+[4. 反转链表](https://github.com/journeycheng/leetCode/blob/master/reverse_linkedList.md)
+
 
 ## 二叉树
 
