@@ -40,3 +40,4 @@
 
 [5. 二叉树是否存在根节点到叶子节点的和等于某个值](https://github.com/journeycheng/leetCode/blob/master/tree_path_sum.md)
 
+[6. 平衡二叉树的判断](https://github.com/journeycheng/leetCode/blob/master/is_balanced_tree.md)
