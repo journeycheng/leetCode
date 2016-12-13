@@ -10,6 +10,8 @@
 
 [4. 二分查找](https://github.com/journeycheng/leetCode/blob/master/array_binary_search.md)
 
+[5. 找出唯一的单个元素](https://github.com/journeycheng/leetCode/blob/master/array_find_single.md)
+
 
 ## 链表
 
