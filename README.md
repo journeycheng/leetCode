@@ -21,6 +21,8 @@
 
 [4. 反转链表](https://github.com/journeycheng/leetCode/blob/master/reverse_linkedList.md)
 
+[5. 判断链表中是否有环](https://github.com/journeycheng/leetCode/blob/master/judge_cycle_in_linkedList.md)
+
 
 ## 二叉树
 
