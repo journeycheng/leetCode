@@ -12,6 +12,7 @@ public class ListNode{
 ```
 
 
+1. 利用栈
 ```java
 public static ListNode reverse(ListNode head){
     if(head == null || head.next == null){
@@ -30,6 +31,24 @@ public static ListNode reverse(ListNode head){
     }
     tail.next = null;
     
+    return head;
+}
+```
+
+2. 前插法(有待验证)
+```java
+public static ListNode reverse(ListNode head){
+    if(head == null || head.next == null){
+        return head;
+    }
+    ListNode current = head.next;
+    head.next = null;
+    while(current!=null){
+        ListNode tmp = current.next;
+        current.next = head;
+        head = current;
+        current = tmp;
+    }
     return head;
 }
 ```
