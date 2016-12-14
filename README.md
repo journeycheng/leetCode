@@ -12,6 +12,8 @@
 
 [5. 找出唯一的单个元素](https://github.com/journeycheng/leetCode/blob/master/array_find_single.md)
 
+[6. two sum](https://github.com/journeycheng/leetCode/blob/master/array_two_sum.md)
+
 
 ## 链表
 
