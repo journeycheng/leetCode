@@ -47,3 +47,58 @@
 [7. 有序链表转换为二叉搜索树](https://github.com/journeycheng/leetCode/blob/master/sorted_linkedlist_2_BST.md)
 
 [8. 有序数组转换为二叉搜索树](https://github.com/journeycheng/leetCode/blob/master/sorted_array_2_BST.md)
+
+
+
+## 判断字符串的乱序排列
+
+Given an array of strings, group anagrams together.
+
+For example, given: ["eat", "tea", "tan", "ate", "nat", "bat"], 
+
+```java
+public class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        if(strs == null || strs.length == 0) return null;
+        
+        Map<String, List<String>> map = new HashMap<String, List<String>>();
+        Arrays.sort(strs);
+        for(String s: strs){
+            char[] cs = s.toCharArray();
+            Arrays.sort(cs);
+            String keyStr = String.valueOf(cs);
+            
+            if(!map.containsKey(keyStr)){
+                map.put(keyStr,new ArrayList<String>());
+            }
+            map.get(keyStr).add(s);
+        }
+        
+        return new ArrayList<List<String>>(map.values());
+    }
+}
+```
+
+Given two strings s and t, write a function to determine if t is an anagram of s.
+
+For example,
+
+s = "anagram", t = "nagaram", return true.
+
+s = "rat", t = "car", return false.
+
+Note:You may assume the string contains only lowercase alphabets.
+
+```java
+public class Solution {
+    public boolean isAnagram(String s, String t) {
+        int[] alphabet_count = new int[26];
+        for(int i=0; i<s.length(); i++) alphabet_count[s.charAt(i) - 'a']++;
+        for(int i=0; i<t.length(); i++) alphabet_count[t.charAt(i) - 'a']--;
+        for(int i: alphabet_count){
+            if(i != 0) return false;
+        }
+        return true;
+    }
+}
+```
