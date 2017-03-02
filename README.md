@@ -206,6 +206,124 @@ public class Solution {
 }
 ```
 
+#### nuique paths
+
+A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+
+The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+
+How many possible unique paths are there?
+
+```java
+public class Solution {
+    public int uniquePaths(int m, int n) {
+        Integer[][] map = new Integer[m][n];
+        // 到达第一行或者第一列的任何位置都只有一种可能
+        for(int i=0; i<m; i++){
+            map[i][0] = 1;
+        }
+        for(int i=0; i<n; i++){
+            map[0][i] = 1;
+        }
+        for(int i=1;i<m; i++){
+            for(int j=1;j<n; j++){
+                map[i][j] = map[i-1][j]+map[i][j-1];
+            }
+        }
+        return map[m-1][n-1];
+    }
+}
+```
+#### unique path with obstacle
+
+Now consider if some obstacles are added to the grids. How many unique paths would there be?
+
+An obstacle and empty space is marked as 1 and 0 respectively in the grid.
+
+```
+[
+  [0,0,0],
+  [0,1,0],
+  [0,0,0]
+]
+```
+
+
+```java
+public class Solution {
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        int m = obstacleGrid.length;
+        int n = obstacleGrid[0].length;
+        Integer[][] map = new Integer[m][n];
+        int i = 0;
+        for(; i<m; i++){
+            if(obstacleGrid[i][0] == 1){
+                break; 
+            }
+            map[i][0] = 1;
+        }
+        for(; i<m; i++){
+            map[i][0] = 0;
+        }
+        
+        i = 0;
+        for(; i<n; i++){
+            if(obstacleGrid[0][i] == 1){
+                break;
+            }
+            map[0][i] = 1;
+        }
+        for(; i<n; i++){
+            map[0][i] = 0;
+        }
+        
+        for(i=1; i<m; i++){
+            for(int j=1; j<n; j++){
+                if(obstacleGrid[i][j] == 1){
+                    map[i][j] = 0;
+                }else{
+                    map[i][j] = map[i-1][j] + map[i][j-1];
+                }
+            }
+        }
+        
+        return map[m-1][n-1];
+        
+    }
+}
+```
+
+#### miminum path sum
+Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+
+Note: You can only move either down or right at any point in time.
+
+```java
+public class Solution {
+    public int minPathSum(int[][] grid) {
+        if(grid == null || grid.length == 0) return 0;
+        Integer[][] map = new Integer[grid.length][grid[0].length];
+        map[0][0] = grid[0][0];
+        
+        for(int i=1; i<grid.length; i++){
+            map[i][0] = map[i-1][0] + grid[i][0];
+        }
+        for(int i=1; i<grid[0].length; i++){
+            map[0][i] = map[0][i-1] + grid[0][i];
+        }
+        
+        for(int i=1; i<grid.length; i++){
+            for(int j=1; j<grid[0].length; j++){
+                map[i][j] = Math.min(map[i-1][j], map[i][j-1]) + grid[i][j];
+            }
+        }
+        
+        return map[grid.length-1][grid[0].length-1];
+    }
+}
+```
+
+
 
 ## 矩阵顺时针螺旋读取
 
@@ -280,3 +398,59 @@ public class Solution {
 }
 ```
 
+## 贪心
+
+#### jump game
+
+Given an array of non-negative integers, you are initially positioned at the first index of the array.
+
+Each element in the array represents your maximum jump length at that position.
+
+Determine if you are able to reach the last index.
+
+For example:
+
+A = [2,3,1,1,4], return true.
+
+A = [3,2,1,0,4], return false.
+
+```java
+public class Solution {
+    public boolean canJump(int[] nums) {
+        int max = 0;
+        for(int i=0; i<nums.length; i++){
+            if(i>max) return false;
+            max = Math.max(max, i+nums[i]);
+        }
+        return true;
+    }
+}
+```
+
+## 数组旋转
+
+Rotate an array of n elements to the right by k steps.
+
+For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].
+
+空间复杂度O(1)
+```java
+public class Solution {
+    public void rotate(int[] nums, int k) {
+        k %= nums.length;
+        reverse(nums, 0, nums.length-1);
+        reverse(nums, 0, k-1);
+        reverse(nums, k, nums.length-1);
+    }
+    
+    public void reverse(int[] nums, int start, int end){
+        while(start < end){
+            int tmp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = tmp;
+            start ++;
+            end --;
+        }
+    }
+}
+```
