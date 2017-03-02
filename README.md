@@ -483,3 +483,61 @@ public class Solution {
 - 字符串中的某个字符，charAt()
 
 ## 斐波那契数列
+
+#### Climbing Stairs
+You are climbing a stair case. It takes n(n>0) steps to reach to the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+```java
+public class Solution {
+    public int climbStairs(int n) {
+        if(n == 1){
+            return 1;
+        }
+        if(n == 2){
+            return 2;
+        }
+        int[] result = new int[n];
+        result[0] = 1;
+        result[1] = 2;
+        for(int i=2; i<n; i++){
+            result[i] = result[i-1] + result[i-2];
+        }
+        return result[n-1];
+    }
+}
+```
+
+## 栈、队列
+#### Simplify Path
+
+Given an absolute path for a file (Unix-style), simplify it.
+
+For example,
+path = "/home/", => "/home"
+path = "/a/./b/../../c/", => "/c"
+
+```java
+public class Solution {
+    public String simplifyPath(String path) {
+        Deque<String> stack = new LinkedList<>();
+        Set<String> skip = new HashSet<>(Arrays.asList("..", ".", ""));
+        for(String dir: path.split("/")){
+            if(dir.equals("..") && !stack.isEmpty()) stack.pop();
+            else if(!skip.contains(dir)) stack.push(dir);
+        }
+        String res = "";
+        for(String dir: stack){
+            res = "/" + dir + res;
+        }
+        
+        return res.isEmpty()? "/" : res;
+    }
+}
+```
+
+- split将path分割，灵活的for循环
+- 栈的pop(), push()，for遍历
+
+
