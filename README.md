@@ -29,6 +29,8 @@
 
 [6. 判断链表中是否有环](https://github.com/journeycheng/leetCode/blob/master/judge_cycle_in_linkedList.md)
 
+[7. 链表的相交起始点](https://github.com/journeycheng/leetCode/blob/master/intersection_of_2_linkedLists.md)
+
 
 ## 二叉树
 
@@ -539,5 +541,7 @@ public class Solution {
 
 - split将path分割，灵活的for循环
 - 栈的pop(), push()，for遍历
+
+
 
 
