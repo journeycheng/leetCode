@@ -50,7 +50,8 @@
 
 [8. 有序数组转换为二叉搜索树](https://github.com/journeycheng/leetCode/blob/master/sorted_array_2_BST.md)
 
-
+## 位操作
+[经典例子合集](https://github.com/journeycheng/leetCode/blob/master/bit_manipulation.md)
 
 ## 判断字符串的乱序排列
 
