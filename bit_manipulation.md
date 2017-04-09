@@ -84,7 +84,19 @@ def countBits(num):
 - 问题描述：给定一个非空数组，里面的元素是非负整数，找出其中两个元素异或的最大值
 
 
+### 405.转换成十六进制
 
+- 问题描述：将一个整数转换为十六进制
+
+```python
+def toHex(num):
+    if num == 0:
+        return '0'
+    
+    hexchars = '0123456789abcdef'
+    return ''.join(hexchars[(num >> 4*i) & 15] for i in range(7, -1, -1).lstrip('0'))
+```
+- 主要思想：利用右移操作和与操作，每4位进行一次计算
 
 
 
